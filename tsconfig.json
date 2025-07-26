@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    //"paths": {
+    //  "@/*": [
+    //    "./src/*"
+    //  ]
+    //},
+  },
+  "include": [
+    "src",            
+    "src/custom.d.ts",
+    "src/resources/theme.d.ts"
+  ]
+}
