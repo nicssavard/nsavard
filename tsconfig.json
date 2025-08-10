@@ -4,6 +4,7 @@
     "module": "ESNext",
     "jsx": "react-jsx",
     "moduleResolution": "node",
+    "allowImportingTsExtensions": true,
     "skipLibCheck": true,
     //"paths": {
     //  "@/*": [
@@ -14,6 +15,10 @@
   "include": [
     "src",            
     "src/custom.d.ts",
-    "src/resources/theme.d.ts"
+    "src/resources/theme.d.ts",
+     ".storybook/**/*.ts",
+     ".storybook/**/*.tsx",
+     "src/**/*.stories.tsx",
+     "src/**/*.story.tsx"
   ]
 }

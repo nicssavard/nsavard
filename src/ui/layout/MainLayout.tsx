@@ -1,26 +1,20 @@
-import { Stack } from "@mui/material";
+import { Box } from "@mui/material";
 import { Header } from "./Header";
-import { Route, Routes } from "react-router-dom";
-import { Logo } from "./Logo";
-import { Code } from "../../code/Code";
+import { Sidebar } from "./Sidebar";
+import { Content } from "./Content";
 
 
 
 export const MainLayout = () => {
-
   return (
-    <Stack sx={{ height: "100%", width: "100%", backgroundColor: "background.default" }}>
+    <Box sx={{
+      height: "100%", width: "100%", backgroundColor: "background.default", display: "grid", gridTemplateColumns: `auto 1fr`, gridTemplateRows: "56px 1fr", gridTemplateAreas: `
+          "header  header"
+          "sidebar content"
+        `}}>
       <Header />
-      <Stack sx={{ flex: 1, height: "0", width: "100%" }}>
-        <Routes>
-          <Route path="/map" element={<Logo />} />
-          <Route path="/code" element={<Code />} />
-          <Route path="/" element={<></>} />
-        </Routes>
-      </Stack>
-
-    </Stack >
+      <Sidebar />
+      <Content />
+    </Box >
   )
 }
-
-
